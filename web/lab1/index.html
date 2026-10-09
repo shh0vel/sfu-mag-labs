@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="кино, архив, фильмы">
+    <meta name="description" content="Киноархив — каталог фильмов.">
+    <title>Киноархив</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <a href="#" class="logo">Киноархив</a>
+
+        <ul class="menu">
+            <li><a href="#films">Фильмы</a></li>
+            <li><a href="#genres">Жанры</a></li>
+            <li><a href="#add">Добавить</a></li>
+        </ul>
+    </div>
+
+    <h1>Киноархив</h1>
+
+    <p>
+        Каталог фильмов. Всего записей: <span class="count">4</span>.
+        Лучший по оценке — <strong>«Крёстный отец»</strong>,
+        самый новый — <em>«Начало»</em>.
+        Средняя оценка IMDb — <mark>8.8</mark>.
+    </p>
+
+    <h2 id="films">Фильмы</h2>
+
+    <table>
+        <tr>
+            <th>Название</th>
+            <th>Режиссёр</th>
+            <th>Год</th>
+            <th>Жанр</th>
+            <th>Оценка IMDb</th>
+        </tr>
+        <tr>
+            <td>Семь</td>
+            <td>Дэвид Финчер</td>
+            <td>1995</td>
+            <td>триллер, детектив</td>
+            <td>8.6</td>
+        </tr>
+        <tr>
+            <td>Начало</td>
+            <td>Кристофер Нолан</td>
+            <td>2010</td>
+            <td>фантастика, триллер</td>
+            <td>8.8</td>
+        </tr>
+        <tr>
+            <td>Крёстный отец</td>
+            <td>Фрэнсис Форд Коппола</td>
+            <td>1972</td>
+            <td>драма, криминал</td>
+            <td>9.2</td>
+        </tr>
+        <tr>
+            <td>Престиж</td>
+            <td>Кристофер Нолан</td>
+            <td>2006</td>
+            <td>триллер, драма</td>
+            <td>8.5</td>
+        </tr>
+    </table>
+
+    <h2 id="genres">Жанры</h2>
+
+    <h3>Распределение по жанрам</h3>
+
+    <div class="genres">
+        <div class="genre"><a href="#">Триллер</a> — <span>3</span></div>
+        <div class="genre"><a href="#">Драма</a> — <span>2</span></div>
+        <div class="genre"><a href="#">Детектив</a> — <span>1</span></div>
+        <div class="genre"><a href="#">Фантастика</a> — <span>1</span></div>
+    </div>
+
+    <h2>Кадр</h2>
+
+    <div class="photo">
+        <span class="badge">2006</span>
+        <picture>
+            <source media="(min-width: 900px)" srcset="img/prestige-large.jpg">
+            <source media="(min-width: 480px)" srcset="img/prestige-medium.jpg">
+            <img src="img/prestige-small.jpg" alt="Кадр из фильма Престиж">
+        </picture>
+    </div>
+
+    <h2>Трейлер</h2>
+
+    <iframe class="video" src="https://www.youtube.com/embed/0B6O17m9sWE" title="Трейлер фильма Престиж"
+        allowfullscreen></iframe>
+
+    <h2 id="add">Добавить фильм</h2>
+
+    <form class="form" action="#" method="post">
+        <p>
+            <label for="title">Название</label>
+            <input type="text" id="title" name="title" required>
+        </p>
+
+        <p>
+            <label for="genre">Жанр</label>
+            <select id="genre" name="genre">
+                <option>Триллер</option>
+                <option>Драма</option>
+                <option>Детектив</option>
+                <option>Фантастика</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="notes">Заметка</label>
+            <textarea id="notes" name="notes" rows="3"></textarea>
+        </p>
+
+        <p>
+            <label><input type="checkbox" name="watched"> Просмотрено</label>
+        </p>
+
+        <p>
+            <button type="submit">Добавить</button>
+        </p>
+    </form>
+
+</body>
+
+</html>
